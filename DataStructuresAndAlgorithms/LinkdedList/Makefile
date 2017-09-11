@@ -5,6 +5,10 @@ OBJS= singly_linked_list.o singly_linked_list_test.o
 main: $(OBJS)
 	$(CC) -o main $^
 
+.PHONY: test
+test: main
+	./main
+
 .c.o:
 	$(CC) -c $<
 
